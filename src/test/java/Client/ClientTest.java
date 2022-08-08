@@ -1,3 +1,5 @@
+package Client;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -32,7 +34,7 @@ public class ClientTest {
     @MethodSource("source")
     public void testGetResource(String key, String expected) {
         //act
-        String result = Client.getResource(key);
+        String result = MessageHandler.getResource(key);
         //assert
         assertEquals(expected, result);
     }
